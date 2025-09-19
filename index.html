@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Information Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="Images/logo.png" alt="Company Logo" class="company-logo">
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="doctor-name">Name</label>
+          <input type="text" id="doctor-name" name="doctor-name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="doctor-mobile">Mobile Number</label>
+          <input type="tel" id="doctor-mobile" name="doctor-mobile" pattern="[0-9]{10}" placeholder="Enter 10 digit mobile number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hospital-name">Company Name</label>
+          <input type="text" id="hospital-name" name="hospital-name" placeholder="Enter Company name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <input type="text" id="designation" name="designation" placeholder="Enter your Designation" required>
+        </div>
+
+        <div class="form-group">
+          <label for="speciality">Speciality</label>
+          <input type="text" id="speciality" name="speciality" placeholder="Enter your Speciality" required>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn primary" onclick="location.href='quiz.html'">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ===== Branding marquee (auto-scroll) ===== -->
+    <div class="brands-wrapper"> <!-- this gives left/right 30px padding -->
+      <div class="brand-marquee" aria-hidden="true">
+        <div class="brand-track">
+          <!-- Put your brand logos here. Duplicate the sequence once for seamless loop. -->
+          <img src="Images/logo1.png" alt="brand1" class="brand-logo">
+          <img src="Images/logo2.png" alt="brand2" class="brand-logo">
+          <img src="Images/logo3.png" alt="brand3" class="brand-logo">
+          <img src="Images/logo4.png" alt="brand4" class="brand-logo">
+
+          <!-- duplicate for continuous effect -->
+          <img src="Images/logo1.png" alt="brand1" class="brand-logo">
+          <img src="Images/logo2.png" alt="brand2" class="brand-logo">
+          <img src="Images/logo3.png" alt="brand3" class="brand-logo">
+          <img src="Images/logo4.png" alt="brand4" class="brand-logo">
+
+          <img src="Images/logo1.png" alt="brand1" class="brand-logo">
+          <img src="Images/logo2.png" alt="brand2" class="brand-logo">
+          <img src="Images/logo3.png" alt="brand3" class="brand-logo">
+          <img src="Images/logo4.png" alt="brand4" class="brand-logo">
+        </div>
+      </div>
+    </div>
+    <!-- ===== end branding marquee ===== -->
+
+  </main>
+</body>
+</html>

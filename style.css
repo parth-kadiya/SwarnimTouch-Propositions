@@ -1,0 +1,208 @@
+/* Compact form + branding marquee */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  text-align: center;
+  background: url('Images/1.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  padding: 12px;
+  color: #154f89;
+}
+.company-logo {
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto -25px auto;
+}
+
+/* Form container */
+.form-container {
+  max-width: 360px;
+  margin: 30px auto 14px auto; /* reduced bottom margin so brands sit closer */
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border: 2px solid #154f89;
+  text-align: left;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 14px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #154f89;
+}
+.form-group input {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #154f89;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #1e6ba5;
+  box-shadow: 0 0 4px rgba(21,79,137,0.4);
+}
+
+/* Actions */
+.form-actions {
+  text-align: center;
+}
+.btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid #154f89;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: #154f89;
+  color: white;
+  border-color: #154f89;
+}
+.btn:hover {
+  background: #154f89;
+  color: white;
+  border-color: #154f89;
+  transform: translateY(-1px);
+}
+.btn.primary:hover {
+  background: #0d3a66;
+  border-color: #0d3a66;
+}
+
+/* ================= Branding marquee styles ================= */
+
+/* wrapper gives the requested left/right 30px spacing and centers under form */
+.brands-wrapper {
+  max-width: 950px;          /* keeps the marquee suitably centered & not too wide */
+  margin: 0px auto 0px;    /* sits below form, centered */
+padding: 0 40px 0 0;
+  box-sizing: border-box;
+}
+
+/* marquee viewport: hides overflow and keeps single horizontal row */
+.brand-marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* track that scrolls using CSS animation */
+.brand-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;                 /* spacing between logos */
+  width: max-content;        /* allow the track to be as wide as its contents */
+  animation: marquee 10s linear infinite;
+  will-change: transform;
+}
+
+/* each logo same visual size */
+.brand-logo {
+  height: 70px;              /* uniform height for all logos */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: none;
+  opacity: 0.95;
+  user-select: none;
+  pointer-events: none;      /* logos non-interactive; remove if you want links */
+}
+
+/* Hover to pause movement (optional UX) */
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
+
+/* marquee animation: translate full width of one sequence.
+   Because we duplicated the logo sequence in HTML, moving by 50% of track width produces a seamless loop.
+*/
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* moves half the whole duplicated set */
+}
+
+/* ================= Responsive tweaks ================= */
+@media (max-width: 767px) {
+
+  .company-logo {
+  max-width: 250px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+  .form-container {
+    margin: 15px;
+    padding: 15px;
+    max-width: 95%;
+  }
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  .form-group input {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+  .btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .brands-wrapper {
+    max-width: 100%;
+    padding: 0 0; /* still keeping left/right 30px on mobile as requested */
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  .brand-logo {
+    height: 34px;
+  }
+  .brand-track { gap: 18px; animation-duration: 16s; }
+}
+
+@media (max-width: 1025px) {
+
+  .company-logo {
+  max-width: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  max-width: 550px !important;
+}
+
+  .brands-wrapper {
+    max-width: 100%;
+    padding: 0 0px; /* still keeping left/right 30px on mobile as requested */
+     margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  } 
+  html, body {
+    background: linear-gradient(to bottom, #fff 0%, #c2caf5 100%);
+    background-attachment: fixed;
+  }
+}
