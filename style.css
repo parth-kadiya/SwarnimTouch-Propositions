@@ -20,20 +20,18 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* keep center */
+  align-items: center;
   padding: 20px;
 }
 
-
 .form-logo {
   text-align: center;
-  margin-bottom: 12px; /* space between logo and inputs */
+  margin-bottom: 12px;
   margin-top: -10px;
 }
 
-/* company-logo used inside form (override as needed) */
 .form-logo .company-logo {
-  max-width: 180px; /* adjust size as needed */
+  max-width: 180px;
   height: auto;
   display: inline-block;
   margin: 0 auto;
@@ -45,7 +43,7 @@ main {
   margin: 30px auto 14px auto;
   background: #fff;
   box-sizing: border-box;
-  padding: 22px 18px 18px 18px; /* increased top padding slightly */
+  padding: 22px 18px 18px 18px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border: 2px solid #483c97;
@@ -64,7 +62,7 @@ main {
 }
 .form-group input {
   width: 100%;
-  padding: 10px 12px; /* slightly larger so placeholders read well */
+  padding: 10px 12px;
   border: 1px solid #483c97;
   border-radius: 6px;
   font-family: inherit;
@@ -99,7 +97,6 @@ main {
   transform: translateY(-1px);
 }
 
-/* --- Category buttons styles --- */
 .categories-container {
   max-width: 1000px;
   margin: 14px auto;
@@ -111,45 +108,42 @@ main {
   gap: 10px;
   justify-content: center;
 }
-/* base button (keep as before but remove heavy border color) */
+
 .cat-btn {
-  padding: 8px 14px;            /* slightly more horizontal padding to hide seams */
+  padding: 8px 14px;
   border-radius: 6px;
-  border: 1px solid transparent; /* use transparent border so height stays consistent */
+  border: 1px solid transparent;
   background: #fff;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
   font-family: "Montserrat", sans-serif;
   transition: all 0.18s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-clip: padding-box; /* ensure background doesn't paint under border */
+  background-clip: padding-box;
 }
 
-/* active gradient button — no visible border, clean edges */
 .cat-btn.active {
   background: linear-gradient(90deg, #bf488a 0%, #29378a 100%);
   color: white;
-  border: 1px solid transparent; /* keep 1px transparent border to avoid layout shift */
-  box-shadow: 0 6px 18px rgba(41,55,138,0.12); /* subtle outer shadow */
+  border: 1px solid transparent;
+  box-shadow: 0 6px 18px rgba(41, 55, 138, 0.12);
   transform: translateY(-1px);
   outline: none;
-  background-clip: padding-box; /* important for clean edges */
+  background-clip: padding-box;
 }
 
-/* hover/active focus states (optional polish) */
 .cat-btn:hover,
 .cat-btn:focus {
   transform: translateY(-2px);
   outline: none;
 }
 .cat-btn[aria-selected="true"] {
-  outline: 3px solid rgba(72,60,151,0.12);
+  outline: 3px solid rgba(72, 60, 151, 0.12);
 }
 
-/* --- Brand marquee styles (kept from your design, with tweak) --- */
 .brands-wrapper {
   max-width: 950px;
   margin: 0px auto 40px;
@@ -184,7 +178,6 @@ main {
   pointer-events: none;
 }
 
-/* pause on hover */
 .brand-marquee:hover .brand-track {
   animation-play-state: paused;
 }
@@ -198,7 +191,6 @@ main {
   }
 }
 
-/* form error styles kept */
 .error-text {
   display: block;
   margin-top: 6px;
@@ -213,39 +205,44 @@ main {
   box-shadow: 0 0 4px rgba(198, 40, 40, 0.18);
 }
 
-/* ----- Static (non-scrolling) layout for specific categories ----- */
 .brand-track.static {
   animation: none !important;
   animation-play-state: paused !important;
-  flex-wrap: wrap;           /* allow wrapping to next line on small screens */
-  justify-content: center;   /* center the logos */
-  width: 100%;               /* take full container width so wrapping works */
-  gap: 30px;                 /* spacing between logos */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
 }
 
-/* allow the parent marquee box to expand for static content if needed */
 .brand-marquee.static {
-  overflow: visible; /* so wrapped rows are fully visible */
+  overflow: visible;
   padding: 12px 0;
 }
 
-/* tweak logo sizing for static mode if you want them a bit larger */
 .brand-track.static .brand-logo {
-  height: 80px;    /* increase if you want bigger icons on desktop */
+  height: 80px;
   max-width: 160px;
   object-fit: contain;
 }
 
-/* Responsive tweaks */
 @media (max-width: 480px) {
-
   .form-container {
     margin-top: -8px;
   }
-  .error-text { font-size: 0.78rem; }
-  .brand-logo { height: 50px; }
-  .brand-track { gap: 18px; animation-duration: 16s; }
-  .cat-btn { padding: 7px 10px; font-size: 0.82rem; }
+  .error-text {
+    font-size: 0.78rem;
+  }
+  .brand-logo {
+    height: 50px;
+  }
+  .brand-track {
+    gap: 18px;
+    animation-duration: 16s;
+  }
+  .cat-btn {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -255,10 +252,7 @@ main {
   }
 }
 
-
-/* --- Make brand marquee full-bleed on small screens (no left/right white gap) --- */
 @media (max-width: 600px) {
-  /* remove container horizontal padding so marquee can touch screen edges */
   .categories-container,
   .brands-wrapper {
     padding-left: 0;
@@ -268,7 +262,6 @@ main {
     margin-right: 0;
   }
 
-  /* remove marquee internal horizontal padding and rounded corners (optional) */
   .brand-marquee {
     padding-left: 0;
     padding-right: 0;
@@ -277,20 +270,18 @@ main {
     border-radius: 0;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden; /* keep overflow hidden so sliding stays clean */
+    overflow: hidden;
   }
 
-  /* reduce gap and ensure the track starts exactly at left edge */
   .brand-track {
-    gap: 14px;                /* smaller gap on mobile */
-    width: max-content;       /* keep max-content so duplication still works */
-    padding-left: 8px;        /* small inner offset so logos don't touch pixel edge */
+    gap: 14px;
+    width: max-content;
+    padding-left: 8px;
     padding-right: 8px;
-    animation-duration: 14s;  /* slightly slower on mobile for readability */
+    animation-duration: 14s;
     will-change: transform;
   }
 
-  /* slightly smaller logos on mobile, prevent extra white space below/side */
   .brand-logo {
     height: 56px;
     max-width: none;
@@ -299,21 +290,6 @@ main {
     object-fit: contain;
   }
 
-  /* If you still see a tiny white sliver at start/end, make the track bleed beyond container */
-  /* This helps when the duplicated track doesn't perfectly fill the viewport width */
-  .brand-track::before,
-  .brand-track::after {
-    content: "";
-    display: inline-block;
-    width: 8px;  /* small buffer to avoid visible seam */
-  }
-
-  /* style.css */
-
-/* ----- YEH CODE BLOCK AAPKI FILE MEIN PEHLE SE HAI ----- */
-@media (max-width: 600px) {
-  /* ... yahan par aapke baki mobile styles hain ... */
-
   .brand-track::before,
   .brand-track::after {
     content: "";
@@ -321,30 +297,36 @@ main {
     width: 8px;
   }
 
-  /* ----- NEECHE DIYA GAYA NAYA CODE YAHAN ADD KAREIN ----- */
+  @media (max-width: 600px) {
+    .brand-track::before,
+    .brand-track::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+    }
 
-  /* FIX for Static Grid on Mobile */
-  .brand-track.static {
-    width: 100%;             /* Yeh track ko poori width dega taaki logos wrap ho sakein */
-    box-sizing: border-box;  /* Yeh padding ko width ke andar rakhega */
-    padding-left: 15px;      /* Screen ke side se thoda gap dega */
-    padding-right: 15px;
-    gap: 15px;               /* Logos ke beech ka gap kam karega */
+    .brand-track.static {
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      gap: 15px;
+    }
   }
 }
-}
-
-
 
 @media (max-width: 1025px) {
-  .company-logo { max-width: 400px; margin-top: 10px; margin-bottom: 10px; }
-  .form-container { max-width: 550px !important; }
-  html, body {
-    background: linear-gradient(
-      to bottom,
-      #d8d4f4 0%,
-      #fbd8e9 100%
-    );
+  .company-logo {
+    max-width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .form-container {
+    max-width: 550px !important;
+  }
+  html,
+  body {
+    background: linear-gradient(to bottom, #d8d4f4 0%, #fbd8e9 100%);
     background-attachment: fixed;
   }
 }

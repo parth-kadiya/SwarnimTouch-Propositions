@@ -190,10 +190,10 @@ header {
   html,
   body {
     background: linear-gradient(
-  to bottom,
-  #d8d4f4 0%,   /* lighter violet tint */
-  #fbd8e9 100%  /* softer pink tint */
-);
+      to bottom,
+      #d8d4f4 0%,
+      /* lighter violet tint */ #fbd8e9 100% /* softer pink tint */
+    );
     background-attachment: fixed;
   }
 }

@@ -277,7 +277,7 @@ header {
 }
 
 .pdf-table th {
-background: linear-gradient(to right, #47419a, #dc4b9b);
+  background: linear-gradient(to right, #47419a, #dc4b9b);
   color: #fff;
   font-weight: 700;
   position: sticky;
@@ -291,7 +291,7 @@ background: linear-gradient(to right, #47419a, #dc4b9b);
 
 .pdf-table .section-header {
   font-weight: 700;
-background: linear-gradient(to right, #47419a, #dc4b9b);
+  background: linear-gradient(to right, #47419a, #dc4b9b);
   color: white;
   padding: 15px;
   text-align: center;
@@ -473,11 +473,7 @@ background: linear-gradient(to right, #47419a, #dc4b9b);
 @media (max-width: 1025px) {
   html,
   body {
-    background: linear-gradient(
-  to bottom,
-  #d8d4f4 0%,   /* lighter violet tint */
-  #fbd8e9 100%  /* softer pink tint */
-);
+    background: linear-gradient(to bottom, #d8d4f4 0%, #fbd8e9 100%);
     background-attachment: fixed;
   }
 }
