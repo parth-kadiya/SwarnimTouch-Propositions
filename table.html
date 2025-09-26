@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwarnimTouch Proposition - Proposal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="table.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="Images/logo.png" alt="Company Logo" class="company-logo" />
+      </div>
+      <h1 class="main-heading">SwarnimTouch Proposition - Proposal</h1>
+    </header>
+
+    <main>
+      <div class="solutions-grid">
+        <div class="solution-box" data-solution-index="0">
+          <h2>Overcoming Reduced Doctor Access & Time</h2>
+          <div class="image-container" tabindex="0">
+            <img src="Images/c1.png" alt="Doctor Access Image" />
+            <div class="overlay-text">Click me</div>
+          </div>
+        </div>
+
+        <div class="solution-box" data-solution-index="1">
+          <h2>Competing in an Overcrowded Market</h2>
+          <div class="image-container" tabindex="0">
+            <img src="Images/c2.png" alt="Market Competition Image" />
+            <div class="overlay-text">Click me</div>
+          </div>
+        </div>
+
+        <div class="solution-box" data-solution-index="2">
+          <h2>Meeting Demand for Evidence & Value</h2>
+          <div class="image-container" tabindex="0">
+            <img src="Images/c3.png" alt="Evidence and Value Image" />
+            <div class="overlay-text">Click me</div>
+          </div>
+        </div>
+
+        <div class="solution-box" data-solution-index="3">
+          <h2>Bridging Digital Transformation Gaps</h2>
+          <div class="image-container" tabindex="0">
+            <img src="Images/c4.png" alt="Digital Transformation Image" />
+            <div class="overlay-text">Click me</div>
+          </div>
+        </div>
+
+        <div class="solution-box" data-solution-index="4">
+          <h2>Staying Compliant with Regulations</h2>
+          <div class="image-container" tabindex="0">
+            <img src="Images/c5.png" alt="Compliance Image" />
+            <div class="overlay-text">Click me</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="solution-modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-action="backdrop"></div>
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabindex="-1"
+      >
+        <div class="modal-header">
+          <h3 id="modal-title"></h3>
+          <div class="modal-actions">
+            <button id="add-remarks-btn" class="btn primary" type="button">
+              Share your brief
+            </button>
+            <button id="ask-demo-btn" class="btn primary" type="button">
+              Ask for Demo
+            </button>
+            <button
+              id="modal-close-btn"
+              class="btn"
+              type="button"
+              aria-label="Close"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+        <div class="modal-content-left">
+          <div
+            id="modal-description"
+            class="modal-description"
+            tabindex="0"
+          ></div>
+        </div>
+        <div id="remarks-modal" class="remarks-modal" aria-hidden="true">
+          <div
+            class="remarks-card"
+            role="dialog"
+            aria-modal="false"
+            aria-label="Add remark"
+          >
+            <label for="remarks-text" class="sr-only">Enter remarks</label>
+            <textarea
+              id="remarks-text"
+              rows="6"
+              placeholder="Type your brief here..."
+            ></textarea>
+            <div class="remarks-actions">
+              <button id="remarks-send" class="btn primary" type="button">
+                Send
+              </button>
+              <button id="remarks-cancel" class="btn" type="button">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="questions-modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-action="close-questions"></div>
+      <div
+        class="modal-panel questions-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="questions-modal-title"
+      >
+        <h3 id="questions-modal-title">Provide Service Details</h3>
+        <div class="questions-form-container">
+          <form id="questions-form"></form>
+        </div>
+        <div class="questions-actions">
+          <button id="questions-submit-btn" class="btn primary" type="button">
+            Submit
+          </button>
+          <button id="questions-cancel-btn" class="btn" type="button">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="table.js"></script>
+  </body>
+</html>

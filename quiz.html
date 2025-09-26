@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwarnimTouch Proposition - Proposal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="main-heading">
+        <i class="fas fa-poll" style="margin-right: 10px"></i> Indian pharma
+        marketers today must move beyond product promotion and focus on doctor
+        education, patient outcome support, and value-driven communication—while
+        ensuring compliance and embracing digital adoption. <br />
+        <br />
+        Your valuable participation will help us strategize and identify the
+        best solutions and platforms for effective HCP engagement and patient
+        support programs.
+      </h1>
+    </header>
+
+    <main>
+      <div class="quiz-container">
+        <h2 class="quiz-question">
+          Take a moment to share your perspective on today’s biggest healthcare
+          challenges:
+        </h2>
+        <form id="quiz-form">
+          <label class="quiz-option">
+            <input
+              type="checkbox"
+              name="challenge"
+              value="Overcoming Reduced Doctor Access & Time"
+            />
+            <span class="custom-checkbox"></span>
+            Overcoming Reduced Doctor Access & Time
+          </label>
+
+          <label class="quiz-option">
+            <input
+              type="checkbox"
+              name="challenge"
+              value="Competing in an Overcrowded Market"
+            />
+            <span class="custom-checkbox"></span>
+            Competing in an Overcrowded Market
+          </label>
+
+          <label class="quiz-option">
+            <input
+              type="checkbox"
+              name="challenge"
+              value="Meeting Demand for Evidence & Value"
+            />
+            <span class="custom-checkbox"></span>
+            Meeting Demand for Evidence & Value
+          </label>
+
+          <label class="quiz-option">
+            <input
+              type="checkbox"
+              name="challenge"
+              value="Bridging Digital Transformation Gaps"
+            />
+            <span class="custom-checkbox"></span>
+            Bridging Digital Transformation Gaps
+          </label>
+
+          <label class="quiz-option">
+            <input
+              type="checkbox"
+              name="challenge"
+              value="Staying Compliant with Regulations"
+            />
+            <span class="custom-checkbox"></span>
+            Staying Compliant with Regulations
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Submit</button>
+          </div>
+        </form>
+
+        <div id="result" class="result-container" style="display: none">
+          <h3>You selected:</h3>
+          <ul id="selected-options"></ul>
+        </div>
+        <div class="form-actions" style="margin-top: 20px">
+          <button id="nextBtn" class="btn primary" style="display: none">
+            Next
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="popup" class="popup-overlay" style="display: none">
+      <div class="popup-box">
+        <h3>⚠ Please choose at least one option!</h3>
+        <button id="closePopup" class="btn primary">OK</button>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

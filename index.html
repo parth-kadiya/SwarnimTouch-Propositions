@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwarnimTouch Proposition - Proposal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <main>
+      <div class="form-container">
+    <!-- logo inside form, top and centered -->
+    <div class="form-logo">
+      <img src="Images/logo.png" alt="Company Logo" class="company-logo" />
+    </div>
+
+    <form id="doctor-form" action="#" method="post" novalidate>
+      <div class="form-group">
+        <input
+          type="text"
+          id="doctor-name"
+          name="doctor-name"
+          placeholder="Enter Name"
+          aria-label="Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="tel"
+          id="doctor-mobile"
+          name="doctor-mobile"
+          pattern="[0-9]{10}"
+          placeholder="Enter Mobile number"
+          aria-label="Mobile Number"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="hospital-name"
+          name="hospital-name"
+          placeholder="Enter Company name"
+          aria-label="Company Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="designation"
+          name="designation"
+          placeholder="Enter Designation"
+          aria-label="Designation"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="speciality"
+          name="speciality"
+          placeholder="Enter Speciality"
+          aria-label="Speciality"
+          required
+        />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+      <!-- Category buttons row (requested) -->
+      <div class="categories-container">
+        <div class="categories" role="tablist" aria-label="Brand categories">
+          <button class="cat-btn active" data-cat="Pharma" role="tab" aria-selected="true">Pharma</button>
+          <button class="cat-btn" data-cat="Corporate" role="tab" aria-selected="false">Corporate</button>
+          <button class="cat-btn" data-cat="Education" role="tab" aria-selected="false">Education</button>
+          <button class="cat-btn" data-cat="Entertainment" role="tab" aria-selected="false">Entertainment</button>
+          <button class="cat-btn" data-cat="Government" role="tab" aria-selected="false">Government</button>
+          <button class="cat-btn" data-cat="International" role="tab" aria-selected="false">International</button>
+          <button class="cat-btn" data-cat="Private Association" role="tab" aria-selected="false">Private Association</button>
+        </div>
+      </div>
+
+      <div class="brands-wrapper">
+        <div class="brand-marquee" aria-hidden="false">
+          <div class="brand-track" aria-live="polite"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
